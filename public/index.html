@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no" />
+      <meta name="description" content="Cálculo de Fechas para Licencias Docentes" />
+      <meta name="author" content="robotmischief" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+    <title>Datedu</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="days" class="content-container hide">
+        <h1 class="txtBold">Inicio de la licencia</h1>
+        <h2 class="txtRegular">Seleccione la fecha de comienzo</h2>
+        <input id="start-lic-days" type="date" class="txtDate" />
+
+        <h1 class="txtBold">Duración de la licencia</h1>
+        <h2 class="txtRegular">Ingrese la cantidad de días</h2>
+        <input id="amount-days" type="number" class="txtDate" value="1" />
+
+        <div class="result-days-content hide">
+          <h1 class="txtRegular">La licencia termina el</h1>
+          <h1 id="result-days" class="txtBold">04/11/2020</h1>
+        </div>
+      </div>
+
+      <div id="dates" class="content-container hide">
+        <h1 class="txtBold">Inicio de la licencia</h1>
+        <h2 class="txtRegular">Seleccione la fecha de comienzo</h2>
+        <input id="start-lic-dates" type="date" class="txtDate" />
+
+        <h1 class="txtBold">Fin de la licencia</h1>
+        <h2 class="txtRegular">Seleccione la fecha en que termina</h2>
+        <input id="end-lic-dates" type="date" class="txtDate" />
+
+        <div class="result-dates-content hide">
+          <h1 class="txtRegular">La cantidad de días de licencia son</h1>
+          <h1 id="result-dates" class="txtBold">1</h1>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="nav-anim-container">
+          <div class="nav-bar back">
+            <div class="btn x"><img src="images/icon_x.svg" alt="close" /></div>
+            <div class="btn x"><img src="images/icon_x.svg" alt="close" /></div>
+          </div>
+          <div class="nav-bar front">
+            <div id="btn-left" class="btn">
+              <img src="images/icon_days.svg" alt="dias" />
+            </div>
+            <div id="btn-right" class="btn">
+              <img src="images/icon_dates.svg" alt="fechas" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header hide">
+        <div class="logo header-logo-popdown">
+          <div class="circle">
+            <div class="icon header-icon-popdown">
+              <img src="images/icon_dates.svg" alt="datedu logo" />
+            </div>
+          </div>
+        </div>
+        <h1 class="hide">Rango de Fechas</h1>
+        <h2 class="hide">¿Cuántos días hay entre dos fechas?</h2>
+      </div>
+
+      <div class="app-logo-container">
+        <div class="circle">
+          <div class="icon">
+            <img src="images/icon_dates.svg" alt="datedu logo" />
+          </div>
+        </div>
+        <h1>DATEDU</h1>
+      </div>
+    </div>
+    <div class="easteregg hide">
+      <img
+        class="anim-easter-egg"
+        src="images/easter_egg.svg"
+        alt="feliz cumple edu"
+      />
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>
